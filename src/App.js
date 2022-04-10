@@ -1,5 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 import "./App.css";
+import Header from './Header.js';
+import Technologies from './Technologies.js';
 
 const App = () => {
   return (
@@ -10,27 +12,5 @@ const App = () => {
   );
 };
 
-const Technologies = () => {
-  return (
-    <div>
-      <ul>
-        <li>Компонента - это функция, возвращающася разметку JSX </li>
-        <li>Компонента - это тег</li>
-        <li>dsds</li>
-        <li>dsds</li>
-      </ul>
-    </div>
-  );
-};
-
-const Header = () => {
-  return (
-    <div>
-      <a href="#s">Home</a>
-      <a href="#s">News Feed</a>
-      <a href="#s">Messages</a>
-    </div>
-  );
-};
 
 export default App;
