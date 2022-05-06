@@ -7,6 +7,9 @@ import {
 } from "../../../redux/profile-reducer.js";
 
 const MyPosts = (props) => {
+  console.log("props", props);
+  let state = props.profilePage;
+
   let postsElements = props.posts.map((p) => (
     <Post message={p.message} likesCount={p.likesCount} />
   ));
