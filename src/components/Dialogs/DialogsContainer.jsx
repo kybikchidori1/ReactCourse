@@ -6,10 +6,11 @@ import {
 import Dialogs from "./Dialogs";
 import StoreContext from "../../StoreContext";
 
-const DialogsContainer = () => {
+const DialogsContainer = ({ store }) => {
+  // console.log("DialogsContainersprops", store);
   return (
     <StoreContext.Consumer>
-      {(store) => {
+      {() => {
         let onSendMessageClick = () => {
           store.dispatch(sendMessageCreator());
         };

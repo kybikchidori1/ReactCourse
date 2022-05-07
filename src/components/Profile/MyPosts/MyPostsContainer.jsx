@@ -7,7 +7,7 @@ import StoreContext from "../../../StoreContext";
 import MyPosts from "./MyPosts";
 
 const MyPostsContainer = (props) => {
-  debugger;
+  console.log("props", props);
   return (
     <StoreContext.Consumer>
       {(store) => {
