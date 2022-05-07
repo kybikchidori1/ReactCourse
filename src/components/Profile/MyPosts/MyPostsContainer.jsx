@@ -7,24 +7,23 @@ import StoreContext from "../../../StoreContext";
 import MyPosts from "./MyPosts";
 
 const MyPostsContainer = (props) => {
-  console.log("props", props);
+  debugger;
   return (
     <StoreContext.Consumer>
       {(store) => {
-        console.log("store", store);
-        let state = store.getState();
-        let addPostClick = () => {
-          store.dispatch(addPostActionCreator());
+        let state = props.store.getState();
+        let addPost = () => {
+          props.store.dispatch(addPostActionCreator());
         };
-        let onPostChange = (body) => {
-          store.dispatch(updateNewPostTextActionCreator(body));
-          // store.dispatch(body);
+        let onPostChange = (text) => {
+          let action = updateNewPostTextActionCreator(text);
+          props.store.dispatch(action);
         };
 
         return (
           <MyPosts
             updateNewPostText={onPostChange}
-            addPost={addPostClick}
+            addPost={addPost}
             posts={state.profilePage.posts}
             newPostText={state.profilePage.newPostText}
           />
