@@ -1,13 +1,21 @@
 import React from "react";
 import s from "./ProfileInfo.module.css";
+import Preloader from "../../common/Preloader/Preloader";
 
-const ProfileInfo = () => {
+const ProfileInfo = (props) => {
+  if (!props.profile) {
+    return <Preloader />;
+  }
+
   return (
     <div>
       <div>
-        <img src="https://avatars.mds.yandex.net/get-zen_doc/3403845/pub_60d2e9de68a7aa40c2fc262e_60d2f399d6f4ab7d154dfa30/scale_1200" />
+        <img src="https://papik.pro/uploads/posts/2021-09/1631091219_23-papik-pro-p-risunok-akhegao-legkii-24.jpg" />
       </div>
-      <div className={s.descriptionBlock}>ava + description</div>
+      <div className={s.descriptionBlock}>
+        <img src={props.profile.photos.large} />
+        ava + description
+      </div>
     </div>
   );
 };
