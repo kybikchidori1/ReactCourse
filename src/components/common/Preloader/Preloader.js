@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import preloader from "../../../assets/img/preloader.gif";
 
 let Preloader = (props) => {
